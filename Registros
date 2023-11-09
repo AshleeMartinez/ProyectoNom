@@ -1,0 +1,412 @@
+package Java.Proyecto;
+
+import java.util.Scanner;
+
+class Registros {
+    // Atributos declarados conforme a Nomina Mensual
+    String Nombre;
+    String Cargo;
+    float SalarioBasico;
+    float SalarioMensual;
+    float Antiguedad;
+    float HorasExtras;
+    float HorasTrabajadas;
+    static float SalarioBruto;
+    double INSS_Laboral = 0.7;//
+    float IR;
+    float CuotaSindical;
+    float Anticipo;
+    float Comedor;
+    float TotalDeducciones;
+    float SalarioNeto;
+    float INATEC;
+    float INSS_Patronal;
+    float Vacaciones;
+    float Aguinaldo;
+    float Indemnizacion;
+
+    public Registros(String Nombre, String Cargo, float SalarioBasico, float SalarioMensual, float Antiguedad,
+            float HorasExtras, float HorasTrabajadas, float SalarioBruto,
+            double INSS_Laboral, float IR,
+            float CuotaSindical, float Anticipo, float Comedor, float TotalDeducciones, float SalarioNeto,
+            float INATEC,
+            float INSS_Patronal, float Vacaciones, float Aguinaldo, float Indemnizacion) {
+        this.Nombre = Nombre;
+        this.Cargo = Cargo;
+        this.SalarioBasico = SalarioBasico;
+        this.SalarioMensual = SalarioMensual;
+        this.Antiguedad = Antiguedad;
+        this.HorasExtras = HorasExtras;
+        this.HorasTrabajadas = HorasTrabajadas;
+        this.SalarioBruto = SalarioBruto;
+        this.INSS_Laboral = INSS_Laboral;
+        this.IR = IR;
+        this.CuotaSindical = CuotaSindical;
+        this.Anticipo = Anticipo;
+        this.Comedor = Comedor;
+        this.TotalDeducciones = TotalDeducciones;
+        this.SalarioNeto = SalarioNeto;
+        this.INATEC = INATEC;
+        this.INSS_Patronal = INSS_Patronal;
+        this.Vacaciones = Vacaciones;
+        this.Aguinaldo = Aguinaldo;
+        this.Indemnizacion = Indemnizacion;
+    }
+
+    // Metodo ToString
+
+    @Override
+    public String toString() {
+        return "Registros [Nombre=" + Nombre + ", Cargo=" + Cargo + ", SalarioBasico=" + SalarioBasico
+                + ", SalarioMensual=" + SalarioMensual + ", Antiguedad=" + Antiguedad + ", HorasExtras=" + HorasExtras
+                + ", HorasTrabajadas=" + HorasTrabajadas + ", INSS_Laboral=" + INSS_Laboral
+                + ", IR=" + IR + ", CuotaSindical=" + CuotaSindical + ", Anticipo=" + Anticipo + ", Comedor=" + Comedor
+                + ", TotalDeducciones=" + TotalDeducciones + ", SalarioNeto=" + SalarioNeto + ", INATEC=" + INATEC
+                + ", INSS_Patronal=" + INSS_Patronal + ", Vacaciones=" + Vacaciones + ", Aguinaldo=" + Aguinaldo
+                + ", Indemnizacion=" + Indemnizacion + "]";
+    }
+
+    // Getters y Setters
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String nombre) {
+        Nombre = nombre;
+    }
+
+    public String getCargo() {
+        return Cargo;
+    }
+
+    public void setCargo(String cargo) {
+        Cargo = cargo;
+    }
+
+    public float getSalarioBasico() {
+        return SalarioBasico;
+    }
+
+    public void setSalarioBasico(float salarioBasico) {
+        SalarioBasico = salarioBasico;
+    }
+
+    public float getSalarioMensual() {
+        return SalarioMensual;
+    }
+
+    public void setSalarioMensual(float salarioMensual) {
+        SalarioMensual = salarioMensual;
+    }
+
+    public float getAntiguedad() {
+        return Antiguedad;
+    }
+
+    public void setAntiguedad(float antiguedad) {
+        Antiguedad = antiguedad;
+    }
+
+    public float getHorasExtras() {
+        return HorasExtras;
+    }
+
+    public void setHorasExtras(float horasExtras) {
+        HorasExtras = horasExtras;
+    }
+
+    public float getHorasTrabajadas() {
+        return HorasTrabajadas;
+    }
+
+    public void setHorasTrabajadas(float horasTrabajadas) {
+        HorasTrabajadas = horasTrabajadas;
+    }
+
+    public static float getSalarioBruto() {
+        return SalarioBruto;
+    }
+
+    public static void setSalarioBruto(float salarioBruto) {
+        SalarioBruto = salarioBruto;
+    }
+
+    public double getINSS_Laboral() {
+        return INSS_Laboral;
+    }
+
+    public void setINSS_Laboral(double iNSS_Laboral) {
+        INSS_Laboral = iNSS_Laboral;
+    }
+
+    public float getIR() {
+        return IR;
+    }
+
+    public void setIR(float iR) {
+        IR = iR;
+    }
+
+    public float getCuotaSindical() {
+        return CuotaSindical;
+    }
+
+    public void setCuotaSindical(float cuotaSindical) {
+        CuotaSindical = cuotaSindical;
+    }
+
+    public float getAnticipo() {
+        return Anticipo;
+    }
+
+    public void setAnticipo(float anticipo) {
+        Anticipo = anticipo;
+    }
+
+    public float getComedor() {
+        return Comedor;
+    }
+
+    public void setComedor(float comedor) {
+        Comedor = comedor;
+    }
+
+    public float getTotalDeducciones() {
+        return TotalDeducciones;
+    }
+
+    public void setTotalDeducciones(float totalDeducciones) {
+        TotalDeducciones = totalDeducciones;
+    }
+
+    public float getSalarioNeto() {
+        return SalarioNeto;
+    }
+
+    public void setSalarioNeto(float salarioNeto) {
+        SalarioNeto = salarioNeto;
+    }
+
+    public float getINATEC() {
+        return INATEC;
+    }
+
+    public void setINATEC(float iNATEC) {
+        INATEC = iNATEC;
+    }
+
+    public float getINSS_Patronal() {
+        return INSS_Patronal;
+    }
+
+    public void setINSS_Patronal(float iNSS_Patronal) {
+        INSS_Patronal = iNSS_Patronal;
+    }
+
+    public float getVacaciones() {
+        return Vacaciones;
+    }
+
+    public void setVacaciones(float vacaciones) {
+        Vacaciones = vacaciones;
+    }
+
+    public float getAguinaldo() {
+        return Aguinaldo;
+    }
+
+    public void setAguinaldo(float aguinaldo) {
+        Aguinaldo = aguinaldo;
+    }
+
+    public float getIndemnizacion() {
+        return Indemnizacion;
+    }
+
+    public void setIndemnizacion(float indemnizacion) {
+        Indemnizacion = indemnizacion;
+    }
+
+    public static Scanner getScanner() {
+        return scanner;
+    }
+
+    public static void setScanner(Scanner scanner) {
+        Registros.scanner = scanner;
+    }
+
+    // Declara Scanner como variable global
+    private static Scanner scanner = new Scanner(System.in);
+
+    // Pedir datos
+    public static String obtenerNombreUsuario() {
+        System.out.print("Ingresa nombre del Empleado");
+        String Nombre = scanner.nextLine();
+        System.out.print("Nombre del Empleado" + Nombre);
+        return Nombre;
+    }
+
+    public static String obtenerCargo() {
+        System.out.print("Ingresa cargo del Empleado");
+        String Cargo = scanner.nextLine();
+        System.out.print("Cargo del Empleado: " + Cargo);
+        return Cargo;
+    }
+
+    public static float obtenerSalarioBasico() {
+        System.out.print("Ingresa Salario del Empleado");
+        float SalarioBasico = scanner.nextFloat();
+        System.out.print("Salario del Empleado: " + SalarioBasico);
+        return SalarioBasico;
+    }
+
+    public static float obtenerCuotaHoras() {
+        System.out.print("Ingresa Cuota de Horas: ");
+        float Horas = scanner.nextFloat();
+        System.out.print("Cuota de Horas: " + Horas);
+        return Horas;
+    }
+
+    public static float obtenerHorasTrabajadas() {
+        // (Limite de Hrs*CuotadeSalario*hora*37(tc))*2
+        System.out.print("Ingresa Horas Trabajadas ");
+        float HorasTrabajadas = scanner.nextFloat();
+        System.out.print("HorasTrabajadas del Empleado: " + HorasTrabajadas);
+        return HorasTrabajadas;
+    }
+
+    public static float obtenerHorasExtras() {
+        // (Limite de Hrs*CuotadeSalario*hora*37(tc))*2
+        System.out.print("Ingresa Horas Extras: ");
+        float ResultadoHorasExtras = (float) Math.sqrt(8 * obtenerCuotaHoras() * obtenerHorasTrabajadas() * 37);
+        System.out.print("HorasExtras del Empleado: " + ResultadoHorasExtras);
+        return ResultadoHorasExtras;
+    }
+
+    public static float obtenerAntiguedad() {
+        System.out.print("Ingresa Antiguedad del Empleado");
+        float Antiguedad = scanner.nextFloat();
+        System.out.print("Antiguedad del Empleado: " + Antiguedad);
+        return Antiguedad;
+    }
+
+    public static float obtenerSalarioBruto() {
+        // SalarioMensual = SalarioBasico + Antiguedad + HorasExtras;
+        System.out.print("Ingresa SalarioBruto del Empleado");
+        float SalarioBruto = obtenerSalarioBasico();
+        System.out.print("SalarioBruto del Empleado: " + SalarioBruto);
+        return SalarioBruto;
+    }
+
+    public static float obtenerINSS_Laboral() {
+        System.out.println("Ingresa el INSS_Laboral ");
+        float ResultadoINSS_Laboral = (float) (0.7 * obtenerSalarioBruto());
+        System.out.println("El INSS_Laboral es: " + ResultadoINSS_Laboral);
+        return ResultadoINSS_Laboral;
+    }
+
+    public static double obtenerIR() {
+        double ResultadoIR = SalarioBruto - obtenerINSS_Laboral() * 12;
+
+        if (ResultadoIR <= 8333.33) {
+            System.out.println("No pasa nada, no se aplica IR");
+        } else if (ResultadoIR <= 16666.66) {
+            double ResultadoIR2 = (ResultadoIR - 8333.33) * 0.15 / 12;
+            System.out.println("El IR es: " + ResultadoIR2);
+            return ResultadoIR2;
+        } else if (ResultadoIR <= 29166.67) {
+            double ResultadoIR3 = (ResultadoIR - 16666.66) * 0.20 + 1250.00 / 12;
+            System.out.println("El IR es: " + ResultadoIR3);
+            return ResultadoIR3;
+        } else if (ResultadoIR <= 41666.67) {
+            double ResultadoIR4 = (ResultadoIR - 29166.66) * 0.25 + 3750.00 / 12;
+            System.out.println("El IR es: " + ResultadoIR4);
+            return ResultadoIR4;
+        } else {
+            double ResultadoIR5 = (ResultadoIR - 41666.67) * 0.30 + 6875.00 / 12;
+            System.out.println("El IR es: " + ResultadoIR5);
+            return ResultadoIR5;
+        }
+        return ResultadoIR;
+    }
+
+    public static float obtenerAnticipo() {
+        System.out.print("Ingresa Anticipo del Empleado");
+        float Anticipo = scanner.nextFloat();
+        System.out.print("Anticipo del Empleado: " + Anticipo);
+        return Anticipo;
+    }
+
+    public static float obtenerComedor() {
+        System.out.print("Ingresa Comedor del Empleado");
+        float Comedor = scanner.nextFloat();
+        System.out.print("Comedor del Empleado: " + Comedor);
+        return Comedor;
+    }
+
+    public static float obtenerCuotaSindical() {
+        System.out.print("Ingresa CuotaSindical del Empleado ");
+        float CuotaSindical = scanner.nextFloat();
+        System.out.print("Ingresa CuotaSindical del Empleado: " + CuotaSindical);
+        return CuotaSindical;
+    }
+
+    public static double obtenerTotalDeDeducciones() {
+        // T.Deducciones= INSS_Laboral+ IR+Anticipo+C.sINDICAL+Comedor
+        double T_Deducciones = obtenerINSS_Laboral() + obtenerIR() + obtenerAnticipo() + obtenerCuotaSindical()
+                + obtenerComedor();
+        System.out.print("Total de Deducciones es: " + T_Deducciones);
+        return T_Deducciones; // Revisar esta variable
+    }
+
+    public static double obtenerSalarioNeto() {
+        // SalarioNeto= S.bRUTO-T.deducciones
+        double T_SalarioNeto = obtenerSalarioBruto() - obtenerTotalDeDeducciones();
+        System.out.print("Salario Neto es: " + T_SalarioNeto);
+        return T_SalarioNeto; // Revisar esta variable
+    }
+
+    public static double obtenerINSS_Patronal() {
+        // INSS_Patronal= 22.5% al SalarioBruto
+
+        double T_INSS_Patronal = obtenerSalarioBruto() * 0.225;
+        System.out.print("INSS Patronal del Empleado: " + T_INSS_Patronal);
+        return T_INSS_Patronal;
+    }
+
+    public static double obtenerINATEC() {
+        // INATEC= 2% Al bruto
+
+        double INATEC = obtenerSalarioBruto() * 0.02;
+        System.out.print("Inatec es: " + INATEC);
+        return INATEC;
+    }
+
+    public static double obtenerVacaciones() {
+        // Para Vacaciones, Aguinaldo y Indemnizacion= S.Bruto/30*2.5
+
+        double Vacaciones = obtenerSalarioBruto() / 30 * 0.025;
+
+        System.out.print("Vacaciones es: " + Vacaciones);
+        return Vacaciones;
+    }
+
+    public static double obtenerAguinaldo() {
+        // Para Vacaciones, Aguinaldo y Indemnizacion= S.Bruto/30*2.5
+
+        double Aguinaldo = obtenerSalarioBruto() / 30 * 0.025;
+
+        System.out.print("Aguinaldo es: " + Aguinaldo);
+        return Aguinaldo;
+    }
+
+    public static double obtenerIndemnizacion() {
+        // Para Vacaciones, Aguinaldo y Indemnizacion= S.Bruto/30*2.5
+
+        double Indemnizacion = obtenerSalarioBruto() / 30 * 0.025;
+
+        System.out.print("Indemnizacion es: " + Indemnizacion);
+        return Indemnizacion;
+    }
+
+}
